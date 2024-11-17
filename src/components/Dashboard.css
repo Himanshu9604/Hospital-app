@@ -1,0 +1,95 @@
+/* General dashboard styles */
+.dashboard {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f6f9;
+    max-width: 1900px;
+    margin: 0 auto;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    min-height: 100vh;  /* Ensure the dashboard takes at least the full height of the viewport */
+}
+
+/* Title styling */
+.dashboard-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Container for stats cards */
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Ensures that the cards wrap when needed */
+    overflow-y: scroll; /* Allow vertical scrolling */
+    max-height: 60vh;  /* Restrict height to a fraction of the viewport height */
+    padding-right: 10px; /* Add some spacing for the scrollbar */
+}
+
+/* Hide the scrollbar while keeping the ability to scroll */
+.stats-container::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar */
+}
+
+.stats-container {
+    -ms-overflow-style: none;  /* For IE and Edge */
+    scrollbar-width: none; /* For Firefox */
+}
+
+/* Card styling */
+.stats-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 250px; /* Ensures the card doesn't shrink too small */
+    max-width: 280px; /* Prevents cards from becoming too wide */
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+}
+
+/* Title of each card */
+.stats-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Number (Value) styling */
+.stats-card p {
+    font-size: 2rem; /* Ensure it's large enough for numbers */
+    color: #007BFF;
+    font-weight: bold;
+    word-wrap: break-word; /* Allows long numbers or words to break into a new line */
+    white-space: normal; /* Ensures content wraps */
+}
+
+/* Hover effect on stats cards */
+.stats-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    .stats-card {
+        min-width: 220px; /* Adjusted for medium screens */
+    }
+}

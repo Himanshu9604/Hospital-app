@@ -1,0 +1,138 @@
+/* General Styling */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Header Container */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background: linear-gradient(90deg, #1e88e5, #43a047);
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Left Section - Logo and Hospital Name */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  width: 114px;
+  height: 95px;
+}
+
+.hospital-details {
+  text-align: left;
+}
+
+.hospital-name {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+  color: #ffffff;
+}
+
+.hospital-subname {
+  font-size: 14px;
+  margin: 0;
+  color: #e8f5e9;
+}
+
+/* Right Section - Contact Info and Image */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-info {
+  text-align: right;
+}
+
+.contact-item {
+  font-size: 14px;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.doctor-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .app-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-left,
+  .header-right {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .hospital-name {
+    font-size: 22px;
+  }
+
+  .doctor-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .app-header {
+    padding: 15px;
+  }
+
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .hospital-name {
+    font-size: 20px;
+  }
+
+  .hospital-subname {
+    font-size: 12px;
+  }
+
+  .doctor-image {
+    width: 50px;
+    height: 50px;
+  }
+
+  .contact-item {
+    font-size: 12px;
+  }
+
+  .icon {
+    width: 18px;
+    height: 18px;
+  }
+}

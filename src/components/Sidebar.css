@@ -1,0 +1,56 @@
+/* src/components/Sidebar.css */
+.sidebar {
+  width: 220px;
+  background: linear-gradient(180deg, #1e88e5, #43a047);
+  color: white;
+  padding: 9px;
+}
+ 
+/* List Styling */
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+}
+
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.sidebar ul li a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(5px);
+}
+
+/* Sidebar Icons */
+.sidebar-icon {
+  margin-right: 15px;
+  font-size: 20px;
+}
+
+/* Responsive Sidebar */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 180px;
+  }
+
+  .sidebar ul li a {
+    font-size: 14px;
+  }
+
+  .sidebar-icon {
+    font-size: 18px;
+  }
+}
